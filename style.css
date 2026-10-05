@@ -1,0 +1,621 @@
+/* ==========================================================================
+   Aryan Devpura — Personal Portfolio
+   Visual identity inspired by lo-fi, twilight, film-grain album photography.
+   Palette: muted slate-blue, warm amber accents, off-white, earthy neutrals.
+   No gradients. No glows. No emojis. Pure HTML5 + CSS3.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Custom Properties
+   -------------------------------------------------------------------------- */
+:root {
+  /* Backgrounds — cool, desaturated slate tones */
+  --bg-base: #1a1e2e;
+  --bg-muted: #151926;
+  --bg-surface: #222842;
+
+  /* Text */
+  --text-primary: #e8e4df;
+  --text-secondary: #a8a3a0;
+  --text-dim: #706c69;
+
+  /* Accent — warm amber from the lantern light */
+  --amber: #d4a24e;
+  --amber-dim: rgba(212, 162, 78, 0.15);
+  --amber-border: rgba(212, 162, 78, 0.3);
+
+  /* Borders */
+  --border: #2e3348;
+  --border-hover: #3e4460;
+
+  /* Typography */
+  --font-serif: 'Source Serif 4', 'Georgia', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --max-w: 820px;
+  --radius: 4px;
+  --transition: 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-base);
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--amber);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 88%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   3. Navigation
+   -------------------------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(26, 30, 46, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 0;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.nav-label {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+
+.nav-label:hover {
+  color: var(--text-secondary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero
+   -------------------------------------------------------------------------- */
+.hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+/* Photo placeholder */
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.photo-placeholder {
+  width: 160px;
+  height: 200px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-align: center;
+  padding: 0.5rem;
+  line-height: 1.4;
+}
+
+.photo-img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+/* Hero text */
+.hero-intro h1 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.hero-sub {
+  font-size: 0.9rem;
+  color: var(--amber);
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   5. Sections — Common
+   -------------------------------------------------------------------------- */
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-muted {
+  background-color: var(--bg-muted);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--amber);
+  display: inline-block;
+  margin-bottom: 1.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. About
+   -------------------------------------------------------------------------- */
+.about-block p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Education
+   -------------------------------------------------------------------------- */
+.edu-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.edu-item {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  transition: border-color var(--transition);
+}
+
+.edu-item:hover {
+  border-color: var(--border-hover);
+}
+
+.edu-item.edu-current {
+  border-left: 3px solid var(--amber);
+}
+
+.edu-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.edu-dates {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.edu-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--amber);
+  background-color: var(--amber-dim);
+  border: 1px solid var(--amber-border);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius);
+}
+
+.edu-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.edu-place {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.edu-note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+.coursework {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.coursework-heading {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.coursework-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.coursework-list li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius);
+}
+
+/* --------------------------------------------------------------------------
+   8. Skills
+   -------------------------------------------------------------------------- */
+.skills-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.skill-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-row:last-child {
+  border-bottom: none;
+}
+
+.skill-label {
+  flex-shrink: 0;
+  width: 100px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-items span {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius);
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.skill-items span:hover {
+  border-color: var(--amber-border);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   9. Projects
+   -------------------------------------------------------------------------- */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.project {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color var(--transition);
+}
+
+.project:hover {
+  border-color: var(--border-hover);
+}
+
+.project-head {
+  margin-bottom: 0.6rem;
+}
+
+.project-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.project-type {
+  font-size: 0.78rem;
+  color: var(--amber);
+  font-weight: 500;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  max-width: 640px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+
+.project-tech span {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--amber);
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.project-link:hover {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   10. Interests
+   -------------------------------------------------------------------------- */
+.interests-block p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+/* --------------------------------------------------------------------------
+   11. Contact
+   -------------------------------------------------------------------------- */
+.contact-intro {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+.contact-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.contact-item:hover {
+  border-color: var(--amber-border);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   12. Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.8rem 0;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   13. Responsive
+   -------------------------------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-desc {
+    max-width: 100%;
+  }
+
+  .hero-intro h1 {
+    font-size: 1.85rem;
+  }
+
+  .skill-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .skill-label {
+    width: auto;
+  }
+
+  .edu-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .nav-links {
+    display: none;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .hero-intro h1 {
+    font-size: 1.6rem;
+  }
+
+  .photo-placeholder,
+  .photo-img {
+    width: 130px;
+    height: 165px;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+  }
+
+  .projects-list {
+    gap: 1.2rem;
+  }
+
+  .project {
+    padding: 1.2rem;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .contact-item {
+    text-align: center;
+  }
+}

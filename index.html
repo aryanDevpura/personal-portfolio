@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryan Devpura - Portfolio</title>
+  <meta name="description"
+    content="Personal profile of Aryan Devpura, a B.Tech Information Technology student at Manipal Institute of Technology.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-label">Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero" class="hero">
+    <div class="container hero-layout">
+
+      <div class="hero-photo">
+        <img src="assets/photo.jpg" alt="Aryan Devpura" class="photo-img">
+      </div>
+
+      <div class="hero-intro">
+        <h1>Aryan Devpura</h1>
+        <p class="hero-sub">B.Tech Information Technology, Manipal Institute of Technology</p>
+        <p class="hero-desc">
+          I am an IT undergraduate who spends most of his time writing backend code, reading about how systems work and
+          sometimes break, and building small AI agent prototypes that can remember things between conversations. I like
+          working on problems where the software needs to be reliable.
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-heading">About</h2>
+        <div class="about-block">
+          <p>
+            Most of my time goes into building things and figuring out why they break. I got into programming through
+            competitive problem-solving and DSA, and that eventually pulled me toward backend development, databases,
+            and more recently, agentic AI systems. I like understanding how software works beneath the surface rather
+            than just using it. Outside of coursework I usually have some side project going on, whether it is a REST
+            API, a retrieval pipeline, or something I started just because I wanted to learn how it works under the
+            hood.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section section-muted">
+      <div class="container">
+        <h2 class="section-heading">Education</h2>
+
+        <div class="edu-timeline">
+
+          <div class="edu-item edu-current">
+            <div class="edu-top-row">
+              <span class="edu-dates">2024 - Present</span>
+              <span class="edu-badge">CGPA: 8.19</span>
+            </div>
+            <h3 class="edu-title">B.Tech in Information Technology</h3>
+            <p class="edu-place">Manipal Institute of Technology, Manipal</p>
+            <div class="coursework">
+              <span class="coursework-heading">Relevant Coursework</span>
+              <ul class="coursework-list">
+                <li>Data Structures &amp; Algorithms</li>
+                <li>Object-Oriented Programming</li>
+                <li>Database Management Systems</li>
+                <li>Computer Networks</li>
+                <li>Operating Systems</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-top-row">
+              <span class="edu-dates">2023 - 2024</span>
+              <span class="edu-badge">86.8%</span>
+            </div>
+            <h3 class="edu-title">Class XII, CBSE</h3>
+            <p class="edu-place">Satyameva Jayate International School, Ahmedabad</p>
+            <p class="edu-note">90.3% in Physics, Chemistry, and Mathematics</p>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-top-row">
+              <span class="edu-dates">2020 - 2021</span>
+              <span class="edu-badge">94.8%</span>
+            </div>
+            <h3 class="edu-title">Class X, CBSE</h3>
+            <p class="edu-place">D.A.V. International School, Ahmedabad</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-heading">Skills</h2>
+
+        <div class="skills-table">
+
+          <div class="skill-row">
+            <span class="skill-label">Languages</span>
+            <div class="skill-items">
+              <span>C++</span>
+              <span>Java</span>
+              <span>Python</span>
+              <span>C</span>
+              <span>JavaScript</span>
+              <span>SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Frontend</span>
+            <div class="skill-items">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Tailwind CSS</span>
+              <span>React</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Backend</span>
+            <div class="skill-items">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>FastAPI</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">AI / Agents</span>
+            <div class="skill-items">
+              <span>LangGraph</span>
+              <span>Agentic Workflows</span>
+              <span>Vector Search</span>
+              <span>BM25</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Databases</span>
+            <div class="skill-items">
+              <span>PostgreSQL</span>
+              <span>SQLite</span>
+              <span>Prisma ORM</span>
+              <span>sqlite-vec</span>
+              <span>FTS5</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Tools</span>
+            <div class="skill-items">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>VS Code</span>
+              <span>Eclipse</span>
+              <span>Vercel</span>
+              <span>Render</span>
+              <span>Neon</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section section-muted">
+      <div class="container">
+        <h2 class="section-heading">Projects</h2>
+
+        <div class="projects-list">
+
+          <!-- Project: Poseidon -->
+          <article class="project">
+            <div class="project-head">
+              <h3 class="project-name">Poseidon</h3>
+              <span class="project-type">Persistent-Memory AI Agent Harness</span>
+            </div>
+            <p class="project-desc">
+              Poseidon is an AI agent system that keeps its memory across sessions instead of starting fresh every time.
+              The backend runs on FastAPI and uses LangGraph to manage cyclic agent states, so the agent can plan, act,
+              and reflect in a loop. For retrieval, it uses a hybrid approach: sqlite-vec handles vector similarity
+              search over stored embeddings, while FTS5 does full-text keyword ranking. Both results get combined so the
+              agent can pull up relevant past context when responding. The frontend is built with React.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Python</span>
+              <span>LangGraph</span>
+              <span>FastAPI</span>
+              <span>SQLite</span>
+              <span>sqlite-vec</span>
+              <span>FTS5</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Aditya-Jain-01/Poseidon.git" target="_blank" rel="noopener noreferrer"
+                class="project-link">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Project: CodeInsight AI -->
+          <article class="project">
+            <div class="project-head">
+              <h3 class="project-name">CodeInsight AI</h3>
+              <span class="project-type">AI-Powered Code Review Tool</span>
+            </div>
+            <p class="project-desc">
+              A web app where you can write or paste code into a Monaco Editor in the browser, and get it reviewed by
+              the Google Gemini API. The backend is a Node.js/Express server that sends the code to Gemini and parses
+              the structured response back. It flags things like syntax issues, code smell, and possible performance
+              problems. The frontend uses React and Tailwind CSS. Deployed on Vercel (frontend) and Render (backend).
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Tailwind CSS</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>Google Gemini API</span>
+              <span>Monaco Editor</span>
+              <span>Vercel</span>
+              <span>Render</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/aryanDevpura/codeinsight-ai" target="_blank" rel="noopener noreferrer"
+                class="project-link">GitHub</a>
+              <a href="https://codeinsight-ai-six.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-link">Live Demo</a>
+            </div>
+          </article>
+
+          <!-- Project: Personal Finance Tracker -->
+          <article class="project">
+            <div class="project-head">
+              <h3 class="project-name">Personal Finance Tracker</h3>
+              <span class="project-type">Full-Stack Web Application</span>
+            </div>
+            <p class="project-desc">
+              A budgeting and expense tracking app with user authentication built using JWT and bcrypt. The backend is a
+              Node.js/Express REST API connected to a PostgreSQL database through Prisma ORM. Users can log expenses,
+              view spending breakdowns, and manage their budget. The frontend is React with Tailwind CSS. The database
+              is hosted on Neon, frontend on Vercel, and backend on Render.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Tailwind CSS</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>PostgreSQL</span>
+              <span>Prisma ORM</span>
+              <span>JWT</span>
+              <span>bcrypt</span>
+              <span>Vercel</span>
+              <span>Render</span>
+              <span>Neon</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/aryanDevpura/finance-tracker" target="_blank" rel="noopener noreferrer"
+                class="project-link">GitHub</a>
+              <a href="https://finance-tracker-rosy-iota.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-link">Live Demo</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests" class="section">
+      <div class="container">
+        <h2 class="section-heading">Interests</h2>
+        <div class="interests-block">
+          <p>
+            Outside of coding, I spend a fair amount of time sketching and drawing. It is something I have done since
+            school and it stuck around. I don't do it with any professional goal in mind; it is just a way to slow down
+            and focus on something that is not a screen. I also listen to a lot of music, usually while working or
+            studying. It is almost always playing in the background regardless of what I am doing. Between the drawing
+            and the music, they are what I default to when I need a break from assignments or debugging sessions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-muted">
+      <div class="container">
+        <h2 class="section-heading">Contact</h2>
+        <p class="contact-intro">You can reach me through any of the links below.</p>
+        <div class="contact-row">
+          <a href="mailto:aryandevpura1406@gmail.com" class="contact-item">
+            <span class="contact-label">Email</span>
+          </a>
+          <a href="https://github.com/aryanDevpura" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/aryandevpura" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+          </a>
+          <a href="https://leetcode.com/u/aryan5150/" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">LeetCode</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Aryan Devpura, 2026</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
